@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+ 
+  header {
+    background-color: #0B2027;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+  }
+
+  .contenedor {
+    max-width: 1200px;
+    margin: 0;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    gap: 20px; /* Añade espaciado entre los elementos directos del container */
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+
+  nav li {
+    margin-right: 50px;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .boton {
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 30px;
+    text-decoration: none;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 0%;
+  }
+
+  .logo-text {
+    font-size: 50px;
+    margin-left: 10px;
+  }
+
+  .boton-italika {
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 30px;
+    text-decoration: none;
+  }
+
+  .menu-container {
+    position: relative;
+  }
+
+  #menuButton {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+  }
+
+  .dot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 8px);
+    gap: 4px;
+    margin-right: 10px;
+  }
+
+  .dot-grid div {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+  }
+
+  .menu-list{
+    display: none;
+  }
+
+  .menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0B2027;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  #menuButton h2 {
+    margin-right: 10px; /* Ajusta el valor según tus necesidades */
+  }
+
+  #menuButton {
+    background-color: transparent; /* Esto hará que el fondo sea completamente transparente */
+    border: none; /* Esto eliminará cualquier borde predeterminado */
+    outline: none; /* Esto eliminará cualquier contorno que pueda aparecer al hacer clic en el botón */
+    cursor: pointer; /* Cambiará el cursor a una mano cuando pases el mouse sobre el botón */
+  }
+
+  footer{
+    background-color: #0B2027;
+    text-align: start;
+  }
+  footer a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+  }
+  footer h2{
+    color: white;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  /* Estilo para el modal */
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 50%; /* Posición horizontal en el centro */
+    top: 40%; /* Posición vertical en el centro */
+    transform: translate(-50%, -50%); /* Centrar el modal en el medio de la pantalla */
+    width: 50%; /* Ancho del modal */
+    height: 80%; /* Altura automática basada en el contenido */
+    overflow: visible; 
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+  }
+
+  .modal-content {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }  
+
+  .close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #openModal {
+    background-color: #DCF763; /* Color de fondo verde */
+    border: none; /* Sin bordes */
+    color: black; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Tipo de elemento */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cursor tipo mano */
+    border-radius: 12px; /* Bordes redondeados */
+  }
+
+  #openModal:before {
+    position: absolute; /* Posicionamiento absoluto */
+    left: 10px; /* Alineación a la izquierda */
+    top: 50%; /* Centrado verticalmente */
+    transform: translateY(-50%); /* Centrado vertical */
+  }
+
+  .boton-pruebas {
+    margin-left: 40px; /* Añade margen a la izquierda */
+    white-space: nowrap; /* Evita que el texto se envuelva al siguiente renglón */
+    text-align: center; /* Alineación del texto al centro */
+  }
+
+  input[type="text"], select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #555;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .moto-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .moto-image {
+    width: 100px; /* Ancho de la imagen de la moto */
+    height: auto;
+    margin-right: 10px;
+  }
+
+  .moto-options {
+    display: flex; /* Establece el contenedor como un flex container */
+    gap: 20px; /* Espaciado entre las opciones de moto */
+  }
+
+  .moto-options label {
+    display: flex; /* Establece cada opción como un flex container */
+    align-items: center; /* Centra verticalmente el contenido de la opción */
+  }
+
+  main {
+    padding: 100px;
+  }
+
+  section {
+      background-color: #fff;
+      margin: 70px  -40px;
+  }
+  
+
+  .catalog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .catalog-item {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 300px; /* Anchura fija para móviles, luego será responsiva */
+  }
+  
+  .image-button img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .info {
+    /* display: none; */
+    padding: 8px;
+    background-color: #f0f0f0;
+    margin-top: 8px;
+  }
+  
+  /* Botón para mostrar la información */
+  .info-button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    text-align: center;
+  }
+
+  .mission-vision-objectives {
+    background: #b8b8b8; /* Color de fondo de la barra */
+    padding: 20px 10px; /* Espaciado superior e inferior */
+  }
+  
+  .mission-vision-objectives .container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 0 15px; /* Espaciado interno */
+    display: flex; /* Activar Flexbox */
+    flex-wrap: wrap; /* Permitir el ajuste de elementos */
+    justify-content: space-around; /* Espaciar elementos uniformemente */
+    align-items: center; /* Centrar elementos verticalmente */
+  }
+  
+  .mission-vision-objectives .mvo-item {
+    flex: 1; /* Cada elemento ocupa el mismo espacio */
+    min-width: 200px; /* Ancho mínimo para cada elemento */
+    margin: 10px; /* Margen alrededor de cada elemento */
+    text-align: center; /* Centrar el texto */
+  }
+
+        /*Mis MediaQuerys*/
+
+@media (max-width: 576px) {
+    * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+    
+      body {
+        font-family: Arial, sans-serif;
+      }
+    
+      header {
+        background-color: #0B2027;
+        color: #fff;
+        position: fixed;
+        width: 100%;
+      }
+    
+      .container {
+        max-width: 50%;
+      }
+    
+      nav ul {
+        display: none;
+      }
+    
+      nav li {
+        margin-right: 15%;
+      }
+    
+      .boton {
+        color: #ffffff;
+        padding: 20% 2%;
+        /*font-size: 50%;*/
+        text-decoration: none;
+      }
+      
+      .logo-container {
+        display: flex;
+        align-items: center;
+        margin-left: -25%;
+      }
+    
+      .logo-text {
+        font-size: 800%;
+        margin-left: 5%;
+      }
+    
+      .boton-italika {
+        color: #fff;
+        font-size: 20%;
+        text-decoration: none;
+      }
+    
+      .menu-container {
+        position: relative;
+      }
+    
+      #menuButton {
+        display: flex;
+        align-items: center;
+        padding: 10%;
+        border: none;
+      }
+    
+      .dot-grid {
+        grid-template-columns: repeat(3, 6px);
+        gap: 3px;
+        margin-right: 8px;
+      }
+    
+      .dot-grid div {
+        width: 6px;
+        height: 6px;
+        background-color: #fff;
+      }
+
+      .menu-list {
+        display: block; /* Mostrar la lista en dispositivos móviles */
+      }    
+    
+      .menu-dropdown {
+        position: flex;
+        top: 100%;
+        background-color: #0B2027;
+        border-radius: 5%;
+        box-shadow: 0 8% 16% rgba(0, 0, 0, 0.1);
+      }
+    
+      #menuButton h2 {
+        display: none;
+      }
+    
+      #menuButton {
+        background-color: transparent; /* Esto hará que el fondo sea completamente transparente */
+        border: none; /* Esto eliminará cualquier borde predeterminado */
+        outline: none; /* Esto eliminará cualquier contorno que pueda aparecer al hacer clic en el botón */
+        cursor: pointer; /* Cambiará el cursor a una mano cuando pases el mouse sobre el botón */
+      }
+    
+      /* Estilo para el modal */
+      .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 50%; /* Posición horizontal en el centro */
+        top: 40%; /* Posición vertical en el centro */
+        transform: translate(-50%, -50%); /* Centrar el modal en el medio de la pantalla */
+        width: 50%; /* Ancho del modal */
+        height: 80%; /* Altura automática basada en el contenido */
+        overflow: visible; 
+        background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+      }
+    
+      .modal-content {
+        font-family: Arial, sans-serif;
+        background-color: #333;
+        color: #fff;
+        padding: 20%;
+        width: 100%;
+        box-shadow: 0 4% 8% 0 rgba(0, 0, 0, 0.2);
+      }
+    
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28%;
+        font-weight: bold;
+      }  
+    
+      .close:hover, .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    
+      #openModal {
+        background-color: #DCF763; /* Color de fondo verde */
+        border: none; /* Sin bordes */
+        color: black; /* Texto blanco */
+        padding: 10% 20%; /* Espaciado interno */
+        text-align: center; /* Texto centrado */
+        text-decoration: none; /* Sin subrayado */
+        display: inline-block; /* Tipo de elemento */
+        font-size: 16%; /* Tamaño de la fuente */
+        cursor: pointer; /* Cursor tipo mano */
+        border-radius: 12%; /* Bordes redondeados */
+      }
+    
+      #openModal:before {
+        position: absolute; /* Posicionamiento absoluto */
+        left: 10%; /* Alineación a la izquierda */
+        top: 50%; /* Centrado verticalmente */
+        transform: translateY(-50%); /* Centrado vertical */
+      }
+    
+      .boton-pruebas {
+        margin-left: 40%; /* Añade margen a la izquierda */
+        white-space: nowrap; /* Evita que el texto se envuelva al siguiente renglón */
+        text-align: center; /* Alineación del texto al centro */
+      }
+    
+      input[type="text"], select {
+        display: block;
+        width: 100%;
+        padding: 10%;
+        margin-bottom: 20%;
+        background-color: #444;
+        border: none;
+        color: #fff;
+      }
+      
+      button {
+        padding: 10% 20%;
+        background-color: #555;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+      }
+    
+      .moto-container {
+        display: flex;
+        align-items: center;
+      }
+    
+      .moto-image {
+        width: 100; /* Ancho de la imagen de la moto */
+        height: auto;
+        margin-right: 10%;
+      }
+    
+      .moto-options {
+        display: flex; /* Establece el contenedor como un flex container */
+        gap: 20%; /* Espaciado entre las opciones de moto */
+      }
+    
+      .moto-options label {
+        display: flex; /* Establece cada opción como un flex container */
+        align-items: center; /* Centra verticalmente el contenido de la opción */
+      } 
+
+      section {
+        background-color: #fff;
+        margin: 65px  -60px;
+      }
+      .mission-vision-objectives .container {
+        flex-direction: column; /* Colocar elementos en columna */
+      }
+    
+      .mission-vision-objectives .mvo-item {
+        min-width: 100%; /* Cada elemento ocupa el ancho completo */
+        margin: 10px 0; /* Margen solo superior e inferior */
+      }
+  
+}
+
+@media (min-width: 600px) {
+  .catalog-item {
+    width: 45%; /* Se ajustan dos elementos por fila */
+  }
+}
+
+@media (min-width: 900px) {
+  .catalog-item {
+    width: 30%; /* Se ajustan tres elementos por fila */
+  }
+}
+

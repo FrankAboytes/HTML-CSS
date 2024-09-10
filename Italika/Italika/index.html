@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-ubicacion">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="Estilos.css">
+  <link rel="icon" type="image/png" href="Imagenes/LogoBueno.png">
+  
+
+  <title>Italika</title>
+  
+</head>
+<body>
+ 
+<header>
+  <div class="contenedor"> 
+    <a href="index.html" class="boton-italika">
+        <div class="logo-container">
+          <img src="/Imagenes/LogoBueno.png" alt="Logotipo de Italika" style="max-width: 100px; height: auto;">
+          <span class="logo-text">Italika</span>
+        </div>
+      </a> 
+    <nav>
+      <ul>
+        <li><a href="modelos.html" class="boton">Modelos</a></li>
+        <li><a href="" class="boton">Promociones</a></li>
+        <li><a href="consecionarios.html" class="boton">Concesionarios</a></li>
+      </ul>
+    </nav>
+  
+  
+    <div class="menu-container">
+      <button id="menuButton">
+          <h2>Más</h2>
+          <div class="dot-grid">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>
+      </button>
+      <div id="dropdownMenu" class="menu-dropdown">
+        <ul class="menu-list">
+          <li><a href="modelos.html" class="boton">Modelos</a></li>
+          <li><a href="" class="boton">Promociones</a></li>
+          <li><a href="concesionarios.html" class="boton">Concesionarios</a></li>
+        </ul>
+
+          <a href="#link1">Pestaña 1</a>
+          <a href="#link2">Pestaña 2</a>
+          <a href="#link3">Pestaña 3</a>
+          <!-- Agrega más botones según lo necesites -->
+      </div>
+  </div>
+              <!-- Botón que desencadenará el modal -->
+              <button id="openModal" class="boton boton-pruebas">Pruebas de Manejo</button>
+
+              <!-- Modal -->
+              <div class="modal" id="myModal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>Tu prueba de manejo</h2>                                
+            
+                    <form action="URL_DE_DESTINO" method="POST">
+                      <h4>Selecciona una Moto</h4>
+                      <div class="moto-options">
+                          <label>
+                              <input type="radio" name="moto" value="Deportiva VORTX - 250">
+                              <img src="Imagenes/la 2.png" alt="VORTX - 250" class="moto-image">
+                              <p>Deportiva VORTX - 250</p>
+                          </label>
+                  
+                          <label>
+                            <input type="radio" name="moto" value="Deportiva VORTX - 250">
+                            <img src="Imagenes/la 9.png" alt="VORTX - 250" class="moto-image">
+                            <p>Chopper BlackBird 250</p>
+                          </label>
+                        
+                          <label>
+                            <input type="radio" name="moto" value="Deportiva VORTX - 250">
+                            <img src="Imagenes/la 3.png" alt="VORTX - 250" class="moto-image">
+                            <p>DT150 DELIVERY</p>
+                          </label>
+                      </div>
+
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre">
+            
+                        <label for="correo">Correo electrónico</label>
+                        <input type="text" id="correo" name="correo">
+            
+                        <label for="telefono">Teléfono (10 dígitos)</label>
+                        <input type="text" id="telefono" name="telefono">
+            
+                        <label for="concesionarios">Concesionarios</label>
+                        <select id="concesionarios" name="concesionarios">
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                        </select>
+            
+                        <input type="checkbox" id="privacidad" name="privacidad">
+                        <label for="privacidad">He leído y acepto el aviso de privacidad</label>
+            
+                        <button type="submit">Enviar Datos</button>
+                    </form>
+                </div>
+            </div>
+  </div>
+
+  </header>
+  <main>
+    <section>
+      <h1>Explora las motocicletas</h1>
+      <div class="catalog-container">
+        <!-- Catálogo Item 1 -->
+        <div class="catalog-item">
+          <button class="image-button" onclick="showInfo('info1')">
+            <img src="ruta/a/imagen1.jpg" alt="Descripción de la imagen 1">
+          </button>
+          <div id="info1" class="info">
+            <p>Información detallada  producto 1...</p>
+          </div>
+          <button class="info-button" onclick="showInfo('info1')">Más Información</button>
+        </div>
+      
+        <!-- Catálogo Item 2 -->
+        <div class="catalog-item">
+          <button class="image-button" onclick="showInfo('info2')">
+            <img src="ruta/a/imagen2.jpg" alt="Descripción de la imagen 2">
+          </button>
+          <div id="info2" class="info">
+            <p>Información detallada del producto 2...</p>
+          </div>
+          <button class="info-button" onclick="showInfo('info2')">Más Información</button>
+        </div>
+      
+        <div class="catalog-item">
+          <button class="image-button" onclick="showInfo('info3')">
+            <img src="ruta/a/imagen3.jpg" alt="Descripción de la imagen 3">
+          </button>
+          <div id="info3" class="info">
+            <p>Información detallada del producto 3...</p>
+          </div>
+          <button class="info-button" onclick="showInfo('info3')">Más Información</button>
+        </div>
+
+        <!-- Catálogo Item 1 -->
+          <div class="catalog-item">
+            <button class="image-button" onclick="showInfo('info1')">
+              <img src="ruta/a/imagen1.jpg" alt="Descripción de la imagen 1">
+            </button>
+            <div id="info1" class="info">
+              <p>Información detallada  producto 1...</p>
+            </div>
+            <button class="info-button" onclick="showInfo('info1')">Más Información</button>
+          </div>
+        
+          <!-- Catálogo Item 2 -->
+          <div class="catalog-item">
+            <button class="image-button" onclick="showInfo('info2')">
+              <img src="ruta/a/imagen2.jpg" alt="Descripción de la imagen 2">
+            </button>
+            <div id="info2" class="info">
+              <p>Información detallada del producto 2...</p>
+            </div>
+            <button class="info-button" onclick="showInfo('info2')">Más Información</button>
+          </div>
+        
+          <div class="catalog-item">
+            <button class="image-button" onclick="showInfo('info3')">
+              <img src="ruta/a/imagen3.jpg" alt="Descripción de la imagen 3">
+            </button>
+            <div id="info3" class="info">
+              <p>Información detallada del producto 3...</p>
+            </div>
+            <button class="info-button" onclick="showInfo('info3')">Más Información</button>
+          </div>
+        <!-- Agregar más elementos según sea necesario -->
+      
+      </div>      
+    </section>
+  </main>
+
+  <div class="mission-vision-objectives">
+    <div class="container">
+      <div class="mvo-item">
+        <h3>Misión</h3>
+        <p>Descripción breve de la misión...</p>
+      </div>
+      <div class="mvo-item">
+        <h3>Visión</h3>
+        <p>Descripción breve de la visión...</p>
+      </div>
+      <div class="mvo-item">
+        <h3>Objetivos</h3>
+        <p>Descripción breve de los objetivos...</p>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-5 col-lg-4 mb-4">
+        <h2 class="titulo-footer">Modelos</h2>
+        <a href="">GRAND VITARA BOOSTERGRENN</a>
+        <a href="">SWIFT</a>
+        <a href="">SWIFT SPORT</a>
+        <a href="">IGNIS 2023</a>
+        <a href="">ERTIGA BOOSTERGREEN</a>
+        <a href="">ERTIGA XL7</a>
+        <a href="">S-CROSS</a>
+        <a href="">BALENO CIAZ</a>
+        <a href="">JIMMY</a>
+      </div>
+      <div class="col-12 col-md-5 col-lg-4 mb-4">
+        <h2 class="titulo-footer">Post-Venta</h2>
+        <a href="">Garantía Ordinaria</a>
+        <a href="">Garantía Extendica</a>
+        <a href="">Costos de Mantenimiento</a>
+      </div>
+      <div class="col-12 col-md-5 col-lg-4 mb-4">
+        <h2 class="titulo-footer">Compra</h2>
+        <a href="">Agencia una prueba de manejo</a>
+        <a href="">Cotiza tu moto</a>
+        <a href="">Contactanos</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+$(document).ready(function(){
+      $("#menuButton").click(function(){
+          $("#dropdownMenu").toggle();
+      });
+  });
+
+// Cuando se hace clic en el botón, se abre el modal
+$('#openModal').on('click', function() {
+    $('#myModal').css('display', 'block');
+});
+
+// Cuando se hace clic en (x), cierra el modal
+$('.close').on('click', function() {
+    $('#myModal').css('display', 'none');
+});
+
+// También cierra el modal si se hace clic fuera de él
+$(window).on('click', function(event) {
+    if ($(event.target).hasClass('modal')) {
+        $('#myModal').css('display', 'none');
+    }
+});
+
+function showInfo(infoId) {
+  var infoElement = document.getElementById(infoId);
+  var isDisplayed = infoElement.style.display === 'block';
+  // Oculta el elemento si ya está visible, o muéstralo si está oculto
+  infoElement.style.display = isDisplayed ? 'none' : 'block';
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

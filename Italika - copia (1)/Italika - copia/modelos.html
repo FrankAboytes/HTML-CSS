@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-ubicacion">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="Estilos.css">
+
+  <title>Modelos</title>
+  
+</head>
+<body>
+
+<header>
+  <div class="container"> 
+    <a href="index.html" class="boton-italika">
+        <div class="logo-container">
+          <img src="/Imagenes/LogoBueno.png" alt="Logotipo de Italika" style="width: 100px; height: 100px;">
+          <span class="logo-text">Italika</span>
+        </div>
+      </a> 
+    <nav>
+      <ul>
+        <li><a href="modelos.html" class="boton">Modelos</a></li>
+        <li><a href="" class="boton">Promociones</a></li>
+        <li><a href="consecionarios.html" class="boton">Concesionarios</a></li>
+      </ul>
+    </nav>
+  
+  
+    <div class="menu-container">
+      <button id="menuButton">
+          <h2>Más</h2>
+          <div class="dot-grid">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>
+      </button>
+      <div id="dropdownMenu" class="menu-dropdown">
+          <a href="#link1">Pestaña 1</a>
+          <a href="#link2">Pestaña 2</a>
+          <a href="#link3">Pestaña 3</a>
+          <!-- Agrega más botones según lo necesites -->
+      </div>
+  </div>
+              <!-- Botón que desencadenará el modal -->
+              <button id="openModal" class="boton boton-pruebas">Pruebas de Manejo</button>
+
+              <!-- Modal -->
+              <div class="modal" id="myModal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>Tu prueba de manejo</h2>                                
+            
+                    <form action="URL_DE_DESTINO" method="POST">
+                      <h4>Selecciona una Moto</h4>
+                      <div class="moto-options">
+                          <label>
+                              <input type="radio" name="moto" value="Deportiva VORTX - 250">
+                              <img src="Imagenes/la 2.png" alt="VORTX - 250" class="moto-image">
+                              <p>Deportiva VORTX - 250</p>
+                          </label>
+                  
+                          <label>
+                            <input type="radio" name="moto" value="Deportiva VORTX - 250">
+                            <img src="Imagenes/la 9.png" alt="VORTX - 250" class="moto-image">
+                            <p>Chopper BlackBird 250</p>
+                          </label>
+                        
+                          <label>
+                            <input type="radio" name="moto" value="Deportiva VORTX - 250">
+                            <img src="Imagenes/la 3.png" alt="VORTX - 250" class="moto-image">
+                            <p>DT150 DELIVERY</p>
+                          </label>
+                      </div>
+
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre">
+            
+                        <label for="correo">Correo electrónico</label>
+                        <input type="text" id="correo" name="correo">
+            
+                        <label for="telefono">Teléfono (10 dígitos)</label>
+                        <input type="text" id="telefono" name="telefono">
+            
+                        <label for="concesionarios">Concesionarios</label>
+                        <select id="concesionarios" name="concesionarios">
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                        </select>
+            
+                        <input type="checkbox" id="privacidad" name="privacidad">
+                        <label for="privacidad">He leído y acepto el aviso de privacidad</label>
+            
+                        <button type="submit">Enviar Datos</button>
+                    </form>
+                </div>
+            </div>
+  </div>
+
+</header>
+<main>
+  <section>
+    <!-- Contenido principal de la página -->
+  </section>
+</main>
+
+<script>
+  $(document).ready(function(){
+      $("#menuButton").click(function(){
+          $("#dropdownMenu").toggle();
+      });
+  });
+
+// Cuando se hace clic en el botón, se abre el modal
+$('#openModal').on('click', function() {
+    $('#myModal').css('display', 'block');
+});
+
+// Cuando se hace clic en (x), cierra el modal
+$('.close').on('click', function() {
+    $('#myModal').css('display', 'none');
+});
+
+// También cierra el modal si se hace clic fuera de él
+$(window).on('click', function(event) {
+    if ($(event.target).hasClass('modal')) {
+        $('#myModal').css('display', 'none');
+    }
+});
+
+</script>
+</body>
+</html>

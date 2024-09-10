@@ -1,0 +1,438 @@
+.custom-navbar-bg {
+  background-color: #0B2027; /* Sustituye con tu color deseado */
+}
+.custom-navbar .nav-link {
+  color: #ffffff !important; /* Establece el color de texto a blanco */
+}
+.custom-navbar .nav-link:hover {
+  color: #cccccc !important; /* Color al pasar el ratón por encima, si se desea */
+}
+.navbar-toggler {
+  border-color: rgba(255,255,255,0.1); /* Cambia el color del borde si es necesario */
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+.mi-boton-pruebas {
+  background-color: #DCF763!important;; /* Cambia #tuColorDeseado por el código de color que prefieras */
+  border-color: #DCF763!important;; /* Normalmente se establece igual al background-color para los botones */
+}
+/* Para cambiar el color del texto del botón */
+.mi-boton-pruebas {
+  color: #000!important;; /* Cambia #colorDelTexto por el código de color que prefieras para el texto */
+}
+/* Si necesitas cambiar el color al pasar el mouse (hover) */
+.mi-boton-pruebas:hover {
+  background-color: #b9d053!important;; /* Color de fondo al pasar el mouse */
+  border-color: #b9d053!important;; /* Color del borde al pasar el mouse */
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    background-color: #0B2027;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* asegúrate de que el header esté sobre otros elementos */
+  }
+
+  .contenedor {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .boton {
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 30px;
+    text-decoration: none;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 0%;
+  }
+
+  .logo-text {
+    font-size: 50px;
+    margin-left: 10px;
+  }
+
+  .boton-italika {
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 30px;
+    text-decoration: none;
+  }
+
+  .menu-container {
+    display: none; /* oculto por defecto */
+  }
+
+  #menuButton {
+    display: none; /* oculto por defecto */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .dot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 8px);
+    gap: 4px;
+    margin-right: 10px;
+  }
+
+  .dot-grid div {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+  }
+
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-list li {
+    border-bottom: 1px solid #ffffff50;
+  }
+  
+  .menu-list li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .menu-dropdown {
+    display: none; /* oculto por defecto */
+    position: absolute;
+    background-color: #0B2027;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    right: 0;
+    top: 100%;
+    width: 200px; /* puedes ajustar esto según tus necesidades */
+  }
+
+  #menuButton h2 {
+    margin-right: 10px; /* Ajusta el valor según tus necesidades */
+  }
+
+  #menuButton {
+    background-color: transparent; /* Esto hará que el fondo sea completamente transparente */
+    border: none; /* Esto eliminará cualquier borde predeterminado */
+    outline: none; /* Esto eliminará cualquier contorno que pueda aparecer al hacer clic en el botón */
+    cursor: pointer; /* Cambiará el cursor a una mano cuando pases el mouse sobre el botón */
+  }
+
+  footer{
+    background-color: #0B2027;
+    text-align: start;
+  }
+  footer a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+  }
+  footer h2{
+    color: white;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  main {
+    padding: 100px;
+  }
+
+  section {
+      background-color: #fff;
+      margin: 70px  -40px;
+  }
+  
+  .catalog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .image-button img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .info {
+    /* display: none; */
+    padding: 8px;
+    background-color: #f0f0f0;
+    margin-top: 8px;
+  }
+  
+  /* Botón para mostrar la información */
+  .info-button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    text-align: center;
+  }
+
+  .mission-vision-objectives {
+    background: #b8b8b8; /* Color de fondo de la barra */
+    padding: 20px 10px; /* Espaciado superior e inferior */
+  }
+  
+  .mission-vision-objectives .container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 0 15px; /* Espaciado interno */
+    display: flex; /* Activar Flexbox */
+    flex-wrap: wrap; /* Permitir el ajuste de elementos */
+    justify-content: space-around; /* Espaciar elementos uniformemente */
+    align-items: center; /* Centrar elementos verticalmente */
+  }
+  
+  .mission-vision-objectives .mvo-item {
+    flex: 1; /* Cada elemento ocupa el mismo espacio */
+    min-width: 200px; /* Ancho mínimo para cada elemento */
+    margin: 10px; /* Margen alrededor de cada elemento */
+    text-align: center; /* Centrar el texto */
+  }
+  
+  .custom-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .footer-section {
+    flex: 1; /* Esto permite que cada sección crezca igualmente */
+    min-width: 250px; /* Se asegura de que el contenido no se haga demasiado pequeño */
+    margin-bottom: 20px; /* Espacio entre secciones cuando se apilan */
+  }
+  
+  .titulo-footer {
+    margin-bottom: 10px;
+  }
+
+        /*Mis MediaQuerys*/
+
+@media (max-width: 576px) {
+    * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+    
+      body {
+        font-family: Arial, sans-serif;
+      }
+    
+      header {
+        background-color: #0B2027;
+        color: #fff;
+        position: fixed;
+        width: 100%;
+      }
+    
+      .container {
+        max-width: 50%;
+      }
+    
+      nav ul {
+        display: none;
+      }
+    
+      nav li {
+        margin-right: 15%;
+      }
+    
+      .boton {
+        color: #ffffff;
+        padding: 20% 2%;
+        /*font-size: 50%;*/
+        text-decoration: none;
+      }
+      
+      .logo-container {
+        display: flex;
+        align-items: center;
+        margin-left: -25%;
+      }
+    
+      .logo-text {
+        font-size: 800%;
+        margin-left: 5%;
+      }
+    
+      .boton-italika {
+        color: #fff;
+        font-size: 20%;
+        text-decoration: none;
+      }
+    
+      .menu-container {
+    display: block; /* muestra el contenedor del menú */
+  }
+    
+      #menuButton {
+        display: flex;
+        align-items: center;
+        padding: 10%;
+        border: none;
+      }
+    
+      .dot-grid {
+        grid-template-columns: repeat(3, 6px);
+        gap: 3px;
+        margin-right: 8px;
+      }
+    
+      .dot-grid div {
+        width: 6px;
+        height: 6px;
+        background-color: #fff;
+      }
+
+      .menu-list {
+        display: block; /* Mostrar la lista en dispositivos móviles */
+      }    
+    
+      .menu-dropdown {
+        position: flex;
+        top: 100%;
+        background-color: #0B2027;
+        border-radius: 5%;
+        box-shadow: 0 8% 16% rgba(0, 0, 0, 0.1);
+      }
+    
+      #menuButton h2 {
+        display: none;
+      }
+    
+      #menuButton {
+        background-color: transparent; /* Esto hará que el fondo sea completamente transparente */
+        border: none; /* Esto eliminará cualquier borde predeterminado */
+        outline: none; /* Esto eliminará cualquier contorno que pueda aparecer al hacer clic en el botón */
+        cursor: pointer; /* Cambiará el cursor a una mano cuando pases el mouse sobre el botón */
+      }
+    
+      /* Estilo para el modal */
+    
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28%;
+        font-weight: bold;
+      }  
+    
+      .close:hover, .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    
+    
+      .boton-pruebas {
+        margin-left: 40%; /* Añade margen a la izquierda */
+        white-space: nowrap; /* Evita que el texto se envuelva al siguiente renglón */
+        text-align: center; /* Alineación del texto al centro */
+      }
+    
+      input[type="text"], select {
+        display: block;
+        width: 100%;
+        padding: 10%;
+        margin-bottom: 20%;
+        background-color: #444;
+        border: none;
+        color: #fff;
+      }
+      
+      button {
+        padding: 10% 20%;
+        background-color: #555;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+      }
+    
+
+
+      section {
+        background-color: #fff;
+        margin: 65px  -60px;
+      }
+      .mission-vision-objectives .container {
+        flex-direction: column; /* Colocar elementos en columna */
+      }
+    
+      .mission-vision-objectives .mvo-item {
+        min-width: 100%; /* Cada elemento ocupa el ancho completo */
+        margin: 10px 0; /* Margen solo superior e inferior */
+      }
+
+      .custom-footer {
+        flex-direction: column;
+    
+      }
+  
+}
+
+@media (min-width: 600px) {
+  .catalog-item {
+    width: 45%; /* Se ajustan dos elementos por fila */
+  }
+}
+
+@media (min-width: 900px) {
+  .catalog-item {
+    width: 30%; /* Se ajustan tres elementos por fila */
+  }
+}
+

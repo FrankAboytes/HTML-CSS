@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-ubicacion">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" type="text/css" href="Estilos2.css">
+
+  <link rel="icon" type="image/png" href="Imagenes/LogoBueno.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+
+  <title>Italika</title>
+  
+</head>
+<body>
+<header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg custom-navbar">
+    <a class="navbar-brand" href="index.html">
+        <img src="Imagenes/LogoBueno.png" alt="Logotipo" width="100">
+        Italika
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="modelos.html">Modelos</a>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" onclick="openModal()">Redes Sociales</button>
+          </li>
+                <!-- Contenido de la ventana modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+      <span onclick="closeModal()" style="float: right; cursor: pointer;">&times;</span>
+      <p>Contenido de la ventana modal...</p>
+  </div>
+</div>
+        
+            <li class="nav-item">
+              <a class="nav-link" href="consecionarios.html">Concesionarios</a>
+            </li>
+  
+  
+    <div class="menu-container">
+      <button id="menuButton">
+
+      </button>
+      <div id="dropdownMenu" class="menu-dropdown">
+        <ul class="menu-list">
+          <li><a href="modelos.html" class="boton">Modelos</a></li>
+          <li class="nav-item">
+            <button class="nav-link" onclick="openModal()">Redes Sociales</button>
+        </li>
+          
+          <li><a href="concesionarios.html" class="boton">Concesionarios</a></li>
+        </ul>
+      </div>
+  <style>    
+  .catalog-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .catalog-item img {
+    max-width: 300px; 
+    max-height: 200px; 
+  }
+  .info{
+    display: none;
+  }
+  </style>
+  </div>
+
+    <!-- Botón que desencadenará el modal -->
+<button type="button" class="btn btn-primary mi-boton-pruebas" data-toggle="modal" data-target="#myModal">
+      Pruebas de Manejo
+    </button>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Tu prueba de manejo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido del cuerpo del modal -->
+        <!-- Opciones de motocicletas -->
+        <div class="moto-options">
+          <!-- Opción de moto 1 -->
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="moto" id="moto1" value="Deportiva VORTX - 250">
+            <label class="form-check-label" for="moto1">
+              <img src="Imagenes/la 2.png" alt="VORTX - 250" class="img-fluid">
+              Deportiva VORTX - 250
+            </label>
+          </div>
+          <!-- Opción de moto 2 -->
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="moto" id="moto2" value="Chopper BlackBird 250">
+            <label class="form-check-label" for="moto2">
+              <img src="Imagenes/la 9.png" alt="Chopper BlackBird 250" class="img-fluid">
+              Chopper BlackBird 250
+            </label>
+          </div>
+          <!-- Opción de moto 3 -->
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="moto" id="moto3" value="DT150 DELIVERY">
+            <label class="form-check-label" for="moto3">
+              <img src="Imagenes/la 3.png" alt="DT150 DELIVERY" class="img-fluid">
+              DT150 DELIVERY
+            </label>
+          </div>
+        </div>
+        <!-- Formulario de contacto -->
+        <form>
+          <div class="form-group">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" class="form-control" id="nombre" name="nombre">
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" name="correo">
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono (10 dígitos)</label>
+            <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{10}">
+          </div>
+          <div class="form-group">
+            <label for="concesionarios">Concesionarios</label>
+            <select class="form-control" id="concesionarios" name="concesionarios">
+              <option value="opcion1">Opción 1</option>
+              <option value="opcion2">Opción 2</option>
+            </select>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="privacidad" name="privacidad">
+            <label class="form-check-label" for="privacidad">He leído y acepto el aviso de privacidad</label>
+          </div>
+          <button type="submit" class="btn btn-success">Enviar Datos</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>           
+
+  </header>
+
+  <main>
+    <section>
+      
+      <h1 style="text-align: center; font-size: 40px;">Explora las motocicletas</h1>
+      <div class="catalog-container">
+        <!-- Catálogo Item 1 -->
+        <div class="catalog-item">
+          <button class="image-button" onclick="showInfo('info1')">
+            <img src="Imagenes/la 12.png" alt="Descripción de la imagen 1" width="300" height="200">
+          </button>
+          <div id="info1" class="info">
+            <p>Información detallada  producto 1...</p>
+            <button class="buy-button" onclick="showInfo('Comprar')">Comprar</button>
+          </div>
+          <button class="info-button" onclick="showInfo('info1')">Más Información</button>
+        </div>
+      
+        <!-- Catálogo Item 2 -->
+        <div class="catalog-item">
+          <button class="image-button" onclick="showInfo('info2')">
+            <img src="Imagenes/la 2.png" alt="Descripción de la imagen 2" width="300" height="200">
+          </button>
+          <div id="info2" class="info">
+            <p>Información detallada del producto 2...</p>
+            <button class="buy-button" onclick="showInfo('Comprar')">Comprar</button>
+          </div>
+          <button class="info-button" onclick="showInfo('info2')">Más Información</button>
+        </div>
+      
+        <div class="catalog-item">
+          <button class="image-button" onclick="showInfo('info3')">
+            <img src="Imagenes/la 3.png" alt="Descripción de la imagen 3" width="300" height="200">
+          </button>
+          <div id="info3" class="info">
+            <p>Información detallada del producto 3...</p>
+            <button class="buy-button" onclick="showInfo('Comprar')">Comprar</button>
+          </div>
+          <button class="info-button" onclick="showInfo('info3')">Más Información</button>
+        </div>
+
+        <!-- Catálogo Item 1 -->
+          <div class="catalog-item">
+            <button class="image-button" onclick="showInfo('info1')">
+              <img src="Imagenes/la 4.png" alt="Descripción de la imagen 1">
+            </button>
+            <div id="info4" class="info">
+              <p>Información detallada  producto 4...</p>
+              <button class="buy-button" onclick="showInfo('Comprar')">Comprar</button>
+            </div>
+            <button class="info-button" onclick="showInfo('info4')">Más Información</button>
+          </div>
+        
+          <!-- Catálogo Item 2 -->
+          <div class="catalog-item">
+            <button class="image-button" onclick="showInfo('info2')">
+              <img src="Imagenes/la 5.png" alt="Descripción de la imagen 2">
+            </button>
+            <div id="info5" class="info">
+              <p>Información detallada del producto 5...</p>
+              <button class="buy-button" onclick="showInfo('Comprar')">Comprar</button>
+
+            </div>
+            <button class="info-button" onclick="showInfo('info5')">Más Información</button>
+          </div>
+        
+          <div class="catalog-item">
+            <button class="image-button" onclick="showInfo('info3')">
+              <img src="Imagenes/la 6.png" alt="Descripción de la imagen 3">
+            </button>
+            <div id="info6" class="info">
+              <p>Información detallada del producto 6...</p>
+              <button class="buy-button" onclick="showInfo('Comprar')">Comprar</button>
+
+              
+            </div>
+            <button class="info-button" onclick="showInfo('info6')">Más Información</button>
+          </div>
+        <!-- Agregar más elementos según sea necesario -->
+      
+      </div>      
+    </section>
+  </main>
+
+  <div class="mission-vision-objectives">
+    <div class="container">
+      <div class="mvo-item">
+        <h3>Misión</h3>
+        <p>"Nuestra misión es empoderar a nuestros clientes brindándoles una alternativa eficiente de transporte y diversión, respaldada por productos de vanguardia, servicio al cliente excepcional y un compromiso constante con la innovación y la sostenibilidad. Buscamos crear un impacto positivo en la movilidad y la vida de las personas, contribuyendo al crecimiento económico y social de las comunidades en las que operamos."</p>
+      </div>
+      <div class="mvo-item">
+        <h3>Visión</h3>
+        <p>"Visión de Italika: Nos esforzamos por convertirnos en líderes globales en la industria de la movilidad sostenible, ofreciendo a nuestros clientes soluciones innovadoras y accesibles que transformen la forma en que las personas se desplazan y disfrutan de su tiempo libre. Buscamos ser reconocidos como un referente en tecnología y diseño, comprometidos con la excelencia en cada aspecto de nuestro negocio."</p>
+      </div>
+      <div class="mvo-item">
+        <h3>Objetivos</h3>
+        <p> Crecimiento de mercado,
+              innovación continua, sostenibilidad ambiental, excelencia en el servicio al cliente, rentabilidad y eficiencia operativa, responsabilidad social corporativa, desarrollo de talento humano, expansión de la red de distribución 
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="custom-footer">
+    <div class="footer-section">
+      <h2 class="titulo-footer">Modelos</h2>
+        <a href="">GRAND VITARA BOOSTERGRENN</a>
+        <a href="">SWIFT</a>
+        <a href="">SWIFT SPORT</a>
+        <a href="">IGNIS 2023</a>
+        <a href="">ERTIGA BOOSTERGREEN</a>
+        <a href="">ERTIGA XL7</a>
+        <a href="">S-CROSS</a>
+        <a href="">BALENO CIAZ</a>
+        <a href="">JIMMY</a>
+      </div>
+      <div class="footer-section">
+        <h2 class="titulo-footer">Post-Venta</h2>
+        <a href="">Garantía Ordinaria</a>
+        <a href="">Garantía Extendica</a>
+        <a href="">Costos de Mantenimiento</a>
+      </div>
+      <div class="footer-section">
+        <h2 class="titulo-footer">Post-Venta</h2>
+        <a href="">Agencia una prueba de manejo</a>
+        <a href="">Cotiza tu moto</a>
+        <a href="">Contactanos</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+$(document).ready(function(){
+      $("#menuButton").click(function(){
+          $("#dropdownMenu").toggle();
+      });
+  });
+
+function showInfo(infoId) {
+  var infoElement = document.getElementById(infoId);
+  var isDisplayed = infoElement.style.display === 'block';
+  // Oculta el elemento si ya está visible, o muéstralo si está oculto
+  infoElement.style.display = isDisplayed ? 'none' : 'block';
+}
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+  function openModal() {
+      document.getElementById('myModal').style.display = 'block';
+  }
+
+  function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+  }
+
+  // Cerrar la ventana modal haciendo clic fuera de ella
+  window.onclick = function(event) {
+      var modal = document.getElementById('myModal');
+      if (event.target === modal) {
+          closeModal();
+      }
+  }
+</script>
+
+
+</body>
+</html>
